@@ -1,0 +1,97 @@
+
+li, a , .anker {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+
+
+nav {
+    width: 65%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.ul-list {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+.li-list {
+    font-size: 24px;
+}
+
+
+
+.logo {
+    font-size: 24px;
+}
+
+
+.about {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    direction: rtl;
+    color: white;
+}
+
+
+.about-content {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 50px;
+}
+
+
+
+.contact-page {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: white;
+    direction: rtl;
+}
+
+
+
+.mobile-nav {
+    position: relative;
+}
+
+
+.burger-menu {
+    width: 65%;
+    height: 50px;
+} 
+
+
+
+@media (max-width: 768px) {
+    .mobile-nav .dropdown-list {
+      display: block;
+    }
+  }
