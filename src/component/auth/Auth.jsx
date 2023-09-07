@@ -20,7 +20,7 @@ function Auth() {
     let userAuth = async (e) => {
         e.preventDefault();
 
-        axios.get('http://localhost:3000/user/auth', {
+        axios.get('http://3.64.179.220:3000/user/auth', {
             responseType: "json",
             params: {
                 email,

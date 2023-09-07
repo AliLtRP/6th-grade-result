@@ -41,14 +41,11 @@ function ResultImg({ length }) {
     return (
         <div style={{ margin: '50px' }}>
 
-            {/* {data !== '' && length !== 0 ? <img src={data} alt="" className="result-img" /> : <LoadingSvg />} */}
-
-
             <img src={data} alt="" className="result-img" /> 
 
             <div>
                 {Array.from({ length: length }, (v, i) => {
-                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`http://localhost:3000/result/images/ilyes${i}.png`} alt="" />
+                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`http://3.64.179.220:3000/result/images/ilyes${i}.png`} alt="" />
                 })}
             </div>
 

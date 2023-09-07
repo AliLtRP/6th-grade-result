@@ -54,7 +54,7 @@ function UploadFiles() {
         fromData.append('file', uploadFile);
 
 
-        await axios.post('http://localhost:3000/app/uploadNew', fromData)
+        await axios.post(process.env.REACT_APP_UPLOAD, fromData)
             .then(res => {
                 console.log(res.data);
             }).catch(err => console.log(err));
