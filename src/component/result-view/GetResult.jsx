@@ -2,8 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import ResultImg from "./ResultImg";
 import './style.css';
-import NavBar from "../navbar/NavBar";
-import FinalNavBar from "../navbar/FinalNavBar";
+
 
 
 
@@ -23,6 +22,10 @@ function GetResult() {
     const [pagesNumber, setPagesNumber] = useState(0);
 
     const [disable, setDisable] = useState(null);
+
+    const[flag, setFlag] = useState(false);
+
+
 
 
     let handleCovnName = (e) => {
@@ -77,8 +80,8 @@ function GetResult() {
 
     let handleSubmit = (e) => {
         e.preventDefault();
-
         fetchData();
+        setFlag(true);
     };
 
 
@@ -86,7 +89,6 @@ function GetResult() {
     return (
         <div className="get-result-img">
 
-            {/* <FinalNavBar /> */}
             
             <form onSubmit={handleSubmit} className="result-form">
 
@@ -143,7 +145,7 @@ function GetResult() {
             </form>
 
 
-            <ResultImg length={pagesNumber} />
+            <ResultImg length={pagesNumber} flag={flag} setFlag={setFlag}/>
         </div>
     );
 

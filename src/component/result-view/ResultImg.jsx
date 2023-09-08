@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './style.css';
+import LoadingSvg from './LoadingSvg';
 
 
 
 
 
-
-function ResultImg({ length }) {
+function ResultImg({ length, flag, setFlag }) {
     const [data, setData] = useState('');
 
 
@@ -26,6 +26,7 @@ function ResultImg({ length }) {
 
                 console.log(res);
                 setData(imageUrl);
+                setFlag(false);
             }).catch(err => console.log(err));
     };
 
@@ -37,15 +38,18 @@ function ResultImg({ length }) {
 
 
 
-
+    console.log(flag);
     return (
         <div style={{ margin: '50px' }}>
 
-            <img src={data} alt="" className="result-img" /> 
+            {
+                flag === true ?  <LoadingSvg /> : <img src={data} alt="" className="result-img" />
+            }
+
 
             <div>
                 {Array.from({ length: length }, (v, i) => {
-                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`http://3.64.179.220:3000/result/images/ilyes${i}.png`} alt="" />
+                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`http://18.185.239.143:3000/result/images/ilyes${i}.png`} alt="" />
                 })}
             </div>
 
