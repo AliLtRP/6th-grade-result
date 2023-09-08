@@ -38,7 +38,6 @@ function ResultImg({ length, flag, setFlag }) {
 
 
 
-    console.log(flag);
     return (
         <div style={{ margin: '50px' }}>
 
@@ -49,7 +48,7 @@ function ResultImg({ length, flag, setFlag }) {
 
             <div>
                 {Array.from({ length: length }, (v, i) => {
-                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`http://18.185.239.143:3000/result/images/ilyes${i}.png`} alt="" />
+                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`${process.env.REACT_APP_RESULTS}/ilyes${i}.png`} alt="" />
                 })}
             </div>
 
