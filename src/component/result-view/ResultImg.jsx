@@ -34,9 +34,9 @@ function ResultImg({ length, flag, setFlag }) {
 
     useEffect(() => {
         fetchData();
-    }, [length]);
+    }, [length, flag]);
 
-
+console.log(flag);
 
     return (
         <div style={{ margin: '50px' }}>
@@ -48,7 +48,7 @@ function ResultImg({ length, flag, setFlag }) {
 
             <div>
                 {Array.from({ length: length }, (v, i) => {
-                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`${process.env.REACT_APP_RESULTS}/ilyes${i}.png`} alt="" />
+                    return <img className="result-img-all-pdf" key={Date.now() + i} src={`${process.env.REACT_APP_RESULTS}/ilyes${i}.png`} alt="All Imsges of Result PDF" />
                 })}
             </div>
 
